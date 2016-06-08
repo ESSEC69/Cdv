@@ -1,0 +1,131 @@
+<div class="banner" style="background: linear-gradient(-225deg, rgba(200,200,200,0.2) 0%, rgba(50,50,50,0.8) 50%), url(<%=image_path('background.jpg') %>);">
+  <div class="banner-content">
+    <h1>Cendrine de Villenaut</h1>
+    <p>Creer, partager, transmettre.</p>
+  </div>
+</div>
+<div class="container text-center padded features">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <%= image_tag "cours.png", class: "" %>
+      <h2>Cours de Peinture</h2>
+      <p>Accompagnement d'élève dans leur progression technique et leur cheminement créatif. Organisation de stage de formation autour de projets artistiques.</p>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <%= image_tag "organisation.png", class: "" %>
+      <h2>Organisation d'exposition</h2>
+      <p> Mise en place d'expositions d'oeuvres contemporaines. Organisation de performance par de jeunes artistes.</p>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <%= image_tag "peintre.png", class: "" %>
+      <h2>Création personnelle</h2>
+      <p> Portraite, nature morte sur toile.</p>
+    </div>
+  </div>
+</div>
+
+<div class="wrapper-grey padded" id="event">
+  <div class="container">
+    <h2 class="text-center">Mes Evénements</h2>
+    <div class="full-height text-center">
+          <div class="flex-row flex1">
+            <a href="http://lorempixel.com/400/400/people/1/" title="My Caption">
+              <img src="http://lorempixel.com/160/160/people/1/">
+            </a><a href="http://lorempixel.com/400/400/people/2/">
+              <img src="http://lorempixel.com/160/160/people/2/">
+            </a>
+          </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="wrapper-grey padded" id="prof">
+  <div class="container">
+    <h2 class="text-center">Travaux de mes élèves</h2>
+    <div class="full-height text-center">
+          <div class="flex-row flex2">
+            <a href="http://lorempixel.com/400/400/people/1/">
+              <img src="http://lorempixel.com/160/160/people/1/">
+            </a><a href="http://lorempixel.com/400/400/people/2/">
+              <img src="http://lorempixel.com/160/160/people/2/">
+            </a><a href="http://lorempixel.com/400/400/people/3/">
+              <img src="http://lorempixel.com/160/160/people/3/">
+            </a>
+          </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrapper-grey padded" id="artiste">
+  <div class="container">
+    <h2 class="text-center">Portfolio d'oeuvre personnelle</h2>
+    <div class="full-height text-center">
+      <div class="flex-row flex3">
+        <a href="../images/big_paint_1.png" title="????????">
+          <img src="../images/small_paint_1.png">
+        </a>
+        <a href="../images/big_paint_2.png" title="????????">
+          <img src="../images/small_paint_2.png">
+        </a>
+        <a href="../images/big_paint_3.png" title="????????">
+          <img src="../images/small_paint_3.png">
+        </a>
+        <a href="../images/big_paint_4.png" title="????????">
+          <img src="../images/small_paint_4.png">
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+    <div class="text-center padded" id="contact">
+      <iframe height="500" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none"  src="https://cad69.wufoo.com/embed/m1aep4yh1jx9wd8/"><a href="https://cad69.wufoo.com/forms/m1aep4yh1jx9wd8/">Fill out my Wufoo form!</a></iframe><div id="wuf-adv" style="font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;"></div>
+    </div>
+    </div>
+    <div class="col-md-6">
+      <div id="map" style="width: 100%;height: 600px;"></div>
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+<script type="text/javascript">
+  var myLatlng = new google.maps.LatLng(46.262421,5.234563);
+  var myOptions = {
+    zoom: 16,
+    center: myLatlng,
+    scrollwheel: false,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]
+  };
+
+  var map = new google.maps.Map(document.getElementById('map'), myOptions);
+  var marker = new google.maps.Marker({
+    position: myLatlng,
+    map: map,
+    title:"You are here!"
+  });
+</script>
+<script>
+  $(document).ready(function() {
+    console.log("hello")
+  $('.flex1 a').swipebox({
+    hideBarsDelay : 10000000000,
+    });
+  $('.flex2 a').swipebox({
+    });
+  $('.flex3 a').swipebox({
+    });
+});
+
+</script>
+
+
